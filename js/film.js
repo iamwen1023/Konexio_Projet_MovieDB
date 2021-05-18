@@ -30,13 +30,12 @@ $(function() {
             $.ajax({
                 url: link,
                 success: function(results) {
-                    console.log(results.cast[0].name);
-                    console.log(results.cast[0].profile_path);
+                    console.log(results);
+
                     //               $(".actors").append('<div ><img src="https://image.tmdb.org/t/p/w500' + results.cast[0].profile_path +'"></div>');
                     //               $(".actors").append('<div><h6>' + results.cast[0].name + '</h6> </div>');
                     results.cast.forEach(element => {
-                        $(".actors").append('<div ><img src="https://image.tmdb.org/t/p/w500' + element.profile_path + '"></div>');
-                        $(".actors").append('<div><h6>' + element.name + '</h6></div>');
+                        $(".actors").append('<div class="box"><div><img src="https://image.tmdb.org/t/p/w500' + element.profile_path + '" alt="Actor photo"></div><div><p class="realname">' + element.name + '</p><p >' + element.character + '</p> </div></div>');
                     });
                 }
 
