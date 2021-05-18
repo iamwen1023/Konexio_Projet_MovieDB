@@ -1,7 +1,3 @@
-html {
-    background-color: white;
-}
-
 #logo-tmdb img {
     width: 150px;
     height: auto;
@@ -11,22 +7,18 @@ nav {
     background-color: rgb( 13, 37, 63);
 }
 
-.container {
-    position: relative;
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    left: 0;
+    top: 0;
+    object-fit: cover;
 }
 
 #film {
-    background-color: rgb(21, 86, 156);
-}
-
-#film_background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    opacity: 0.8;
+    position: relative;
 }
 
 #poster img {
@@ -37,39 +29,24 @@ nav {
     opacity: 1;
 }
 
+#film_detail {
+    z-index: 2;
+}
+
 div.scrollmenu {
     overflow: auto;
     white-space: nowrap;
 }
 
-#cast img {
+.actors {
+    background-color: white;
+    color: black;
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+}
+
+.actors img {
     width: 100px;
     height: auto;
-}
-
-.cast_detail {
-    padding: 30px 0 40px;
-    margin-bottom: 30px;
-    background-color: #f7f5ec;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.cast_detail .acter_picture {
-    display: inline-block;
-    height: 130px;
-    width: 130px;
-    margin-bottom: 50px;
-    z-index: 1;
-    position: relative;
-}
-
-.cast_detail .acter_picture::before {
-    content: "";
-    width: 100%;
-    height: 0;
-    border-radius: 50%;
-    background-color: #1369ce;
-    position: absolute;
 }

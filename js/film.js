@@ -22,11 +22,7 @@ $(function() {
         url: link,
         success: function(data) {
             console.log("data", data);
-            $("#film_background").css({
-                backgroundImage: "url(https://image.tmdb.org/t/p/original" + data.backdrop_path +
-                    ")",
-                backgroundSize: "cover"
-            });
+            $(".container").append('<img src=https://image.tmdb.org/t/p/original' + data.backdrop_path + '>');
             $("#poster").append('<img src=https://image.tmdb.org/t/p/w500' + data.poster_path + ' alt="Movie poster">');
             $("#film_detail").append('<h2>' + data.original_title + '</h2>' + '<h3> Synopsis</h3>');
             $("#film_detail").append('<h5>' + data.overview + '</h5>');
@@ -34,9 +30,13 @@ $(function() {
             $.ajax({
                 url: link,
                 success: function(results) {
+                    console.log(results.cast[0].name);
+                    console.log(results.cast[0].profile_path);
+                    //               $(".actors").append('<div ><img src="https://image.tmdb.org/t/p/w500' + results.cast[0].profile_path +'"></div>');
+                    //               $(".actors").append('<div><h6>' + results.cast[0].name + '</h6> </div>');
                     results.cast.forEach(element => {
-                        $(".acter_picture").append('<img src=https://image.tmdb.org/t/p/w500' + element.profile_path + 'alt="photo of this acter/actrise">');
-                        $(".acter_content").append('<h6>' + element.name + '</h6>');
+                        $(".actors").append('<div ><img src="https://image.tmdb.org/t/p/w500' + element.profile_path + '"></div>');
+                        $(".actors").append('<div><h6>' + element.name + '</h6></div>');
                     });
                 }
 
