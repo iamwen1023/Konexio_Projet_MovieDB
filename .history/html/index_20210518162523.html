@@ -15,7 +15,7 @@
 
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"></a>
       <div id="logo-tmdb">
@@ -35,8 +35,8 @@
               Movies
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Popular</a></li>
-              <li><a class="dropdown-item" href="#">Now Playing</a></li>
+              <li><a class="dropdown-item " href="#">Popular</a></li>
+              <li><a class="dropdown-item " href="#">Now Playing</a></li>
               <li><a class="dropdown-item" href="#">Upcoming</a></li>
               <!-- <li><hr class="dropdown-divider"></li> -->
               <li><a class="dropdown-item" href="#">Top Rated</a></li>
@@ -78,17 +78,15 @@
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav text-white ">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" data-toggle="tooltip" data-placement="bottom" href=" ">
-              <span class="glyphicon-plus">
-                <img
-                  src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-371-plus-white-0bac34f16124808a12ea863b4d9cc6e599dee7c0a80658cfe9ead26939e64517.svg"></span>
-              -->
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class=" en nav-link text-white" href="">En</a>
-          </li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-transparent" data-bs-toggle="dropdown" aria-expanded="false">
+              <img
+                src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-371-plus-white-0bac34f16124808a12ea863b4d9cc6e599dee7c0a80658cfe9ead26939e64517.svg">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><a class="dropdown-item" href="#">Discussion</a></li>
+            </ul>
+          </div>
 
           <li class="nav-item">
             <a class="nav-link  text-white" href="">Login</a>
@@ -96,7 +94,9 @@
           <li class="nav-item">
             <a class="nav-link  text-white" href="">Join TMDb</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -141,9 +141,9 @@
         <div class="input-group">
 
           <input type="text" id="search-input" class="form-control"
-            placeholder="Rechercher un film, une émission télévisée, un artiste..." href="../html/index2.html " />
+            placeholder="Rechercher un film, une émission télévisée, un artiste..." />
         </div>
-        <button type="button" id="boutton" class="btn  btn-info" href="../html/index2.html">Search</button>
+        <button type="button" id="boutton" class="btn  btn-info">Search</button>
         <!-- SEARCH MESSAGES IN CASE OF ERROR -->
         <div class="row mt-4 col-6 offset-3">
           <p class="error input-empty d-none">Le champ est vide</p>
@@ -176,7 +176,7 @@
       </div>
     </div>
   </div>
-
+  
   <!-- TEST SCROLLABLE -->
   <div class="container">
     <div class="results-list row">
@@ -247,72 +247,27 @@
   <div class="scrollmenu-tendance scrollmenu-tendance-day scrollmenu-tendance-week">
   </div>
   <div class="purple">
-    <img
-      src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces_filter(duotone,190235,ad47dd)/lMnoYqPIAVL0YaLP5YjRy7iwaYv.jpg"
-      alt="">
+    <img src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces_filter(duotone,190235,ad47dd)/lMnoYqPIAVL0YaLP5YjRy7iwaYv.jpg"alt="">
     <h4>Join Today</h4>
-    <p>Get access to maintain your own custom personal lists, track what you've seen and search and <br> filter for what
-      to watch next—regardless if it's in theatres, on TV or available on popular <br>streaming services like DOCSVILLE,
-      Argo, WOW Presents Plus, and Magellan TV.</p>
-    <button>Sign Up</button>
-    <ul>
-      <li>Enjoy TMDb ad free</li>
-      <li>Maintain a personal watchlist</li>
-      <li>Filter by your subscribed streaming services and find something to watch</li>
-      <li>Log the movies and TV shows you've seen</li>
-      <li>Build custom lists</li>
-      <li>Contribute to and improve our database</li>
-    </ul>
+    <p>Get access to maintain your own custom personal lists, track what you've seen and search and <br> filter for what to watch next—regardless if it's in theatres, on TV or available on popular <br>streaming services like DOCSVILLE, Argo, WOW Presents Plus, and Magellan TV.</p>
+  <button>Sign Up</button>
+  <ul>
+    <li>Enjoy TMDb ad free</li>
+    <li>Maintain a personal watchlist</li>
+    <li>Filter by your subscribed streaming services and find something to watch</li>
+    <li>Log the movies and TV shows you've seen</li>
+    <li>Build custom lists</li>
+    <li>Contribute to and improve our database</li>
+  </ul>
   </div>
-  <footer class="bas">
-    <img
-      src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
-      alt="">
-    <button type="button" class="btn btn-light">JOIN THE COMMUNITY</button>
-    <div class=container>
-      <div class="row">
-        <div class="col-12 col-lg-6 mt-5">
-          <h3>THE BASICS</h3>
-          <li>About TMDb
-          <li>Contact Us</li>
-          <li> Support Forums</li>
-          <li>API</li>
-          <li>System Status</li>
-        </div>
-        <div class="col-12 col-lg-5 mt-5">
-          <h3>GET INVOLVED</h3>
-          <li>Contribution Bible</li>
-          <li>3rd Party Applications</li>
-          <li> Add New Movie</li>
-          <li>Add New TV Show</li>
-        </div>
-        <div class="col-12 col-lg-5 mt-5">
-          <h3>COMMUNITY</h3>
-          <li>Guidelines</li>
-          <li> Discussions</li>
-          <li>Leaderboard</li>
-          <li> Twitter</li>
-        </div>
-        <div class="col-12 col-lg-5 mt-5">
-          <h3>LEGAL</h3>
-          <li>Terms of Use</li>
-          <li>API Terms of Use</li>
-          <li>Privacy Policy</li>
-        </div>
-
-      </div>
-    </div>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
   <script src="../js/script.js"></script>
   <script src="../js/popular.js"></script>
-  <script src="../js/tendances.js"></script>
+  <script src="../js/trendi.js"></script>
   <script src="../js/gratuit.js"></script>
-  <script src="../js/trailer.js"></script>
-
 
 </body>
 

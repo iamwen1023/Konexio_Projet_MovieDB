@@ -6,19 +6,6 @@
 nav{
   background-color:rgb( 13, 37, 63);
 }
-ul li{
-  display: flex;
-  align-items: center;
-  align-content: center;
-}
-.en{
-  border: honeydew 1px solid;
-  width: 35px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 #carouselExampleSlidesOnly{
 position: relative;
 text-align: start;
@@ -132,23 +119,14 @@ text-align: center;
 padding: 14px;
 text-decoration: none;
 }
-div.scrollside-free p {
+div.scrollside-free p,div.scrollside-trailers p {
 color: gray;
 font-weight: normal;
 }
-div.scrollside-trailers p1 {
-color:black;
-font-weight: normal;
-}
-
 div.scrollside-free,div.scrollside-trailers {
 background-color: white;
 overflow: auto;
 white-space: nowrap;
-}
-.movie-item iframe:hover{
-width: 500px;
-
 }
 
 div.scrollmenu-tendance a{
@@ -230,29 +208,4 @@ position: absolute;
 top:150px;
 left:820px;
 color: white;
-}
-div.vote{
-border: green 3px solid;
-border-radius: 50%;
-width: 30px;
-/* position: absolute;
-margin-right: 80px; */
-}
-div .low{
-border-color: red;
-
-}
-footer{
-background-color: white;
-}
-.bas .btn{
-background-color:white;
-color: turquoise;
-font-weight: bolder;
-font-size: 20px;
-
-}
-.bas img{
-height: 94px; 
-width:131px;
 }
