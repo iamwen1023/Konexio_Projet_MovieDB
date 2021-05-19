@@ -47,7 +47,7 @@ $(function() {
                 url: link,
                 success: function(results) {
                     console.log(results);
-                    $(".actors").before('<h3>Headliners</h3>');
+                    $(".actors").before('<h4>Top Billed Cast</h4>');
                     results.cast.forEach(element => {
                         if (!element.profile_path) {
                             linkProfil = "../photo_profile.png";
@@ -58,12 +58,39 @@ $(function() {
                     });
                 }
             });
+            let linkmedia = "https://api.themoviedb.org/3/movie/" + data.id + "/videos?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
+            $.ajax({
+                url: linkmedia,
+                success: function(results) {
+                    //console.log("media", results);
+                    $(".media").append('<div><h4>Media</h4></div>');
+                    results.results.forEach(element => {
+                        console.log(element.key);
+                        $(".media").append('<iframe src="https://www.youtube.com/embed/' + element.key + '" frameborder="1" allowfullscreen></iframe>');
+                    });
+                }
+            });
+            let linkRecommandation = "https://api.themoviedb.org/3/movie/" + data.id + "/recommendations?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
+            let linkRecomanded;
+            $.ajax({
+                url: linkRecommandation,
+                success: function(results) {
+                    console.log("linkrecommandation", results);
+                    $(".media").append('<div><h4>Recommendations</h4></div>');
+                    results.results.forEach(element => {
+                        if (element.poster_path) {
+                            linkRecomanded = "https://image.tmdb.org/t/p/w500" + element.poster_path;
+                            $(".movierecomandation").append('<a class="box" href="film.html?filmId=' + element.id + '"><img src="https://image.tmdb.org/t/p/w500' + linkRecomanded + '"></a>');
+                        }
+
+                    });
+
+                }
+            });
 
         }
     });
 
-
-    console.log("filmId", filmId);
 
 
 });

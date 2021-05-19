@@ -59,7 +59,7 @@ nav {
     padding-bottom: 30px;
 }
 
-.cast h3 {
+.cast h4 {
     color: black;
 }
 
@@ -98,7 +98,7 @@ nav {
     align-items: center;
     width: 100%;
     height: 100%;
-    border: 1px solid gray;
+    border: 1px solid gainsboro;
     border-radius: 5px;
     color: black;
 }
@@ -111,4 +111,34 @@ nav {
 .realname {
     font-size: large;
     font-weight: bolder;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+}
+
+.media iframe {
+    display: flex;
+    overflow: scroll;
+    width: 533px;
+    height: 300px;
+}
+
+.beforemovierecomandation {
+    display: flex;
+    flex-direction: column;
+}
+
+.movierecomandation {
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    border: 5px 5px 5px 5px;
+}
+
+.movierecomandation img {
+    width: 200px;
+    height: auto;
 }
