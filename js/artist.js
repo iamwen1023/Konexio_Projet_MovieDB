@@ -7,7 +7,6 @@ function getUrlVars() {
         vars.push(hash[0]);
         vars[hash[0]] = hash[1];
     }
-    console.log(vars);
     return vars;
 }
 $(function() {
@@ -19,6 +18,7 @@ $(function() {
     }
     let link = "https://api.themoviedb.org/3/person/" + artistId + "?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
     let sex;
+    let linkForFamouseWork;
     $.ajax({
         url: link,
         success: function(data) {
@@ -35,10 +35,6 @@ $(function() {
             } else {
                 sex = "Unknown";
             }
-            data.also_known_as.forEach(element => {
-                console.log(element);
-            });
-
             $(".left_column").append('<div><img src="' + linkProfil + '" alt="Actor photo"></div>');
             $(".left_column").append('<h5>Informations personnelles<h5>');
             $(".left_column").append('<p class="title">Famous for</p><p>' + data.known_for_department + '</p>');
@@ -49,9 +45,24 @@ $(function() {
             data.also_known_as.forEach(element => {
                 $(".left_column").append('<p>' + element + '</p>');
             });
-            $(".right_column").append('<h3>' + data.name + '</h3><h5>Biographie</h5>');
-            $(".right_column").append('<p>' + data.biography + '</p>');
-            $(".right_column").append('<h5>Famous for</h5>');
+            $(".bio").append('<h3>' + data.name + '</h3><h5>Biographie</h5>');
+            $(".bio").append('<p>' + data.biography + '</p>');
+            $(".bio").append('<h5>Famous for</h5>');
+            linkForFamouseWork = "https://api.themoviedb.org/3/person/" + data.id + "/combined_credits?api_key=b8e16ff25f44004fe2ab5dedc9e0453e&language=en-US";
+            $.ajax({
+                url: linkForFamouseWork,
+                success: function(data) {
+                    console.log(data);
+                    //console.log(data.cast);
+                    data.cast.forEach(element => {
+                        console.log(element.poster_path);
+                        if (element.poster_path) {
+                            $(".famouseMoive").append('<a href="film.html?filmId=' + element.id + '"><img src="https://image.tmdb.org/t/p/w500' + element.poster_path + '"></a>');
+                        }
+                    });
+                }
+            });
+
 
         }
 
