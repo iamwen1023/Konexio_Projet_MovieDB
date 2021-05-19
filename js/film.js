@@ -18,27 +18,45 @@ $(function() {
         return;
     }
     let link = "https://api.themoviedb.org/3/movie/" + filmId + "?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
+    let genres_film = "";
+    let hour, minute;
     $.ajax({
         url: link,
         success: function(data) {
             console.log("data", data);
             $(".container").append('<img src=https://image.tmdb.org/t/p/original' + data.backdrop_path + '>');
             $("#poster").append('<img src=https://image.tmdb.org/t/p/w500' + data.poster_path + ' alt="Movie poster">');
-            $("#film_detail").append('<h2>' + data.original_title + '</h2>' + '<h3> Synopsis</h3>');
-            $("#film_detail").append('<h5>' + data.overview + '</h5>');
+            $("#film_detail").append('<h2>' + data.title + '</h2>');
+            data.genres.forEach(element => {
+                genres_film += element.name + ", ";
+            });
+            hour = Math.floor(data.runtime / 60);
+            minute = data.runtime % 60;
+            $("#film_detail").append('<p>' + data.release_date + ", " + genres_film + " " + hour + "h " + minute + 'm</p>');
+            $("#film_detail").append('<h4>Synopsis</h4><h5>' + data.overview + '</h5>');
+            $(".right_column").append('<p class="title">Titre d\'origine </p><p class="text">' + data.original_title + '</p><br />');
+            $(".right_column").append('<p class="title">Statut</p><p class="text">' + data.status + '</p><br />');
+            $(".right_column").append('<p class="title">Langue d\'origine</p><p class="text">' + data.original_language + '</p><br />');
+            $(".right_column").append('<p class="title">Budget</p><p class="text">$' + data.budget + '</p><br />');
+            $(".right_column").append('<p class="title">Recette</p><p class="text">$' + data.revenue + '</p><br />');
+
+
             link = "https://api.themoviedb.org/3/movie/" + data.id + "/credits?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
+            let linkProfil;
             $.ajax({
                 url: link,
                 success: function(results) {
                     console.log(results);
-
-                    //               $(".actors").append('<div ><img src="https://image.tmdb.org/t/p/w500' + results.cast[0].profile_path +'"></div>');
-                    //               $(".actors").append('<div><h6>' + results.cast[0].name + '</h6> </div>');
+                    $(".actors").before('<h3>Headliners</h3>');
                     results.cast.forEach(element => {
-                        $(".actors").append('<div class="box"><div><img src="https://image.tmdb.org/t/p/w500' + element.profile_path + '" alt="Actor photo"></div><div><p class="realname">' + element.name + '</p><p >' + element.character + '</p> </div></div>');
+                        if (!element.profile_path) {
+                            linkProfil = "../photo_profile.png";
+                        } else {
+                            linkProfil = "https://image.tmdb.org/t/p/w500" + element.profile_path;
+                        }
+                        $(".actors").append('<a style="display:block" href="artist.html?artistId=' + element.id + '"><div class="box"><div><img src="' + linkProfil + '" alt="Actor photo"></div><div><p class="realname">' + element.name + '</p><p >' + element.character + '</p> </div></div></a>');
                     });
                 }
-
             });
 
         }
