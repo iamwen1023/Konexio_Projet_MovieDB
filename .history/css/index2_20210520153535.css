@@ -7,7 +7,6 @@
 .results-list img {
   width: 180px;
   height:fit-content;
-  border-radius: 20px;
 }
 .results-list h3{
   margin-left: 50px;
@@ -35,7 +34,7 @@
 }
 .page-link{
   left: 180px;
-  margin-top: 20px;
+  margin-top: ;
   background-color:teal;
 }
 
