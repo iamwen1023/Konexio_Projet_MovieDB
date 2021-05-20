@@ -1,41 +1,23 @@
 
-
 #logo-tmdb img{
   width: 150px;
   height: auto;
 }
-nav.navbar{
+nav{
   background-color:rgb( 13, 37, 63);
 }
 ul li{
   display: flex;
   align-items: center;
   align-content: center;
-padding: 3px 5px;
 }
-.nav-link img{
-  width: 20px;
-  height: 20px;
-}
-a.en{
-  width: 28px;
-  height: 26px;
+.en{
+  border: honeydew 1px solid;
+  width: 35px;
+  height: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  align-content: center;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  /* padding: 3px 5px; */
-  transition: linear .1s;
-  color: #fff;
-  font-weight: 600; 
-  font-size: 0.9em;
-  text-transform: uppercase;
-}
-a.en:hover{
-  background-color: white;
-  color: black;
+  justify-content: center;
 }
 #carouselExampleSlidesOnly{
 position: relative;
@@ -44,20 +26,9 @@ background-color: white;
 color: black;
 
 }
-
-nav {
-    background-color: rgb( 13, 37, 63);
-}
-
-#carouselExampleSlidesOnly {
-    position: relative;
-    text-align: start;
-    color: white;
-}
-
 .top-left {
 position: absolute;
-top: 70px;
+top: 50px;
 left: 30px;
 }
 .input-group{
@@ -72,13 +43,44 @@ background-color: turquoise;
 border-color: turquoise;
 border-radius: 20px;
 }
-#boutton:hover{
-color: black;
-}
 #search-input{
 border-radius: 20px;
 }
+.error {
+display: block;
+color: rgb(218, 126, 126);
+font-style: italic;
+background-color: white;
+}
+.results-list{
+position: absolute;
+top: 400px;
+background-color: white;
 
+}
+.results-list img {
+width: 150px;
+margin-left: 8px;
+}
+.results-list p {
+margin: 0px;
+}
+.results-list .synopsis {
+font-size: 14px;
+}
+.movie {
+padding-bottom: 8px;
+border-bottom:  1px solid rgb(211, 211, 211);
+}
+.class1 .p1{
+color: gray;
+}
+.page-link{
+position: absolute;
+top: 170px;
+left: 80px;
+background-color:teal;
+}
 div.scrollmenu {
 background-color: #333;
 overflow: auto;
@@ -145,7 +147,8 @@ overflow: auto;
 white-space: nowrap;
 }
 .movie-item iframe:hover{
-transform: scale(1.5); 
+width: 500px;
+
 }
 
 div.scrollmenu-tendance a{
@@ -193,31 +196,7 @@ border-radius: 30%;
 border-right-color: white;
 border-bottom-color: white ;
 }
-button.movies:hover{
-background-color: rgb( 13, 37, 63);
-color: aqua;
-}
-button.rent:hover{
-background-color: rgb( 13, 37, 63);
-color: aqua;
-}
-button.streaming:hover{
-background-color: rgb( 13, 37, 63);
-color: aqua;
-}
-button.day:hover{
-background-color: rgb( 13, 37, 63);
-color: aqua;
-}
-button.week:hover{
-background-color: rgb( 13, 37, 63);
-color: aqua;
-}
-button.tv:hover{
-background-color: rgb( 13, 37, 63);
-color: aqua;
-}
-button.theatres:hover{
+button.day,button.week,button.streaming,button.tv,button.rent,button.theatres:hover{
 background-color: rgb( 13, 37, 63);
 color: aqua;
 }
@@ -263,55 +242,17 @@ div .low{
 border-color: red;
 
 }
-
-
-/* footer */
+footer{
+background-color: white;
+}
 .bas .btn{
 background-color:white;
 color: turquoise;
 font-weight: bolder;
-font-size: 20px; 
-position: absolute;
-top: 3000px;
-left: 180px;
+font-size: 20px;
+
 }
 .bas img{
 height: 94px; 
 width:131px;
-position: absolute;
-top: 2830px;
-left: 300px;
 }
-footer{
-background-color:rgb( 13, 37, 63);
-}
-
-span.glyphicon-plus{
-visibility:hidden;
-padding:5px 0;
-z-index:1;
-opacity:0;
-transition: opacity.6s;
-display: block;
-border: 4px solid black;
-background-color: white;
-color: black;
-width: 250px;
-display: flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-}
-a.nav-link{
- position: relative;
- 
-}
-.tooltip-bottom{
- top: 135%;
- left:50%;
- margin-left: -60px;
-}
-/* .results-list{
-position: absolute;
-left: 10px;
-} */
