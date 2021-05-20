@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style_film.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <div id="logo-tmdb">
+                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav text-white ">
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-transparent text-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Movies
+            </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item " href="#">Popular</a></li>
+                            <li><a class="dropdown-item " href="#">Now Playing</a></li>
+                            <li><a class="dropdown-item" href="#">Upcoming</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                            <li><a class="dropdown-item" href="#">Top Rated</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-transparent  text-white" data-bs-toggle="dropdown" aria-expanded="false">
+              TV Shows
+            </button>
+                        <ul class="dropdown-menu text-white">
+                            <li><a class="dropdown-item" href="#">Popular</a></li>
+                            <li><a class="dropdown-item" href="#">Airing today</a></li>
+                            <li><a class="dropdown-item" href="#">On TV</a></li>
+                            <li><a class="dropdown-item" href="#">Top Rated</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-transparent text-white" data-bs-toggle="dropdown">
+              People
+            </button>
+                        <ul class="dropdown-menu text-white">
+                            <li><a class="dropdown-item" href="#">Popular People</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-transparent text-white" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Discussion</a></li>
+                            <li><a class="dropdown-item" href="#">Leaderboard</a></li>
+                            <li><a class="dropdown-item" href="#">Support</a></li>
+                            <li><a class="dropdown-item" href="#">API</a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-white ">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-transparent" data-bs-toggle="dropdown" aria-expanded="false">
+              <img
+                src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-371-plus-white-0bac34f16124808a12ea863b4d9cc6e599dee7c0a80658cfe9ead26939e64517.svg">
+            </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Discussion</a></li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link  text-white" href="">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  text-white" href="">Join TMDb</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="container" id="film">
+            <div class="row" id="film_background">
+                <div class="col-4" id="poster">
+                </div>
+                <div class="col-8" id="film_detail">
+                </div>
+            </div>
+        </div>
+
+        <div class="colume_wrapper cast">
+            <div class="content_wrapper">
+                <div class="left_column">
+                    <div class="actors">
+                    </div>
+                    <div class="media">
+                    </div>
+                    <div class="movierecomandation">
+                    </div>
+                </div>
+                <div class="right_column">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="../js/film.js"></script>
+</body>
+
+</html>

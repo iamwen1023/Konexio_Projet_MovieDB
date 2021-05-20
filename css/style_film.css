@@ -1,0 +1,144 @@
+body {
+    padding: 3px 3px 3px 3px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#logo-tmdb img {
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    background-color: rgb( 13, 37, 63);
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+#film {
+    position: relative;
+}
+
+#poster img {
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+}
+
+#film_detail {
+    z-index: 2;
+}
+
+.colume_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: white;
+}
+
+.content_wrapper {
+    max-width: var(--maxPrimaryPageWidth);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cast h4 {
+    color: black;
+}
+
+.left_column {
+    width: calc(100vw - 80px - 268px);
+    max-width: calc(var(--maxPrimaryPageWidth) - 80px - 268px);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    padding-right: 30px;
+}
+
+.right_column {
+    min-width: 260px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding-left: 10px;
+}
+
+.right_column .title {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.actors {
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    color: black;
+}
+
+.actors img {
+    width: 100px;
+    height: auto;
+}
+
+.realname {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+}
+
+.media iframe {
+    display: flex;
+    overflow: scroll;
+    width: 533px;
+    height: 300px;
+}
+
+.beforemovierecomandation {
+    display: flex;
+    flex-direction: column;
+}
+
+.movierecomandation {
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    border: 5px 5px 5px 5px;
+}
+
+.movierecomandation img {
+    width: 200px;
+    height: auto;
+}

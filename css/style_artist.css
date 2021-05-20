@@ -1,0 +1,95 @@
+body {
+    background-color: white;
+}
+
+#logo-tmdb img {
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    background-color: rgb( 13, 37, 63);
+}
+
+.column_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: white;
+}
+
+.content_wrapper {
+    max-width: var(--maxPrimaryPageWidth);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.left_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left_column img {
+    display: block;
+    width: 70%;
+    min-width: 70%;
+    height: 100%;
+    min-height: 100%;
+    border-width: 5px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.left_column h5 {
+    color: black;
+}
+
+.left_column p {
+    color: black;
+    margin: 0px 0px 0px 0px;
+}
+
+.left_column .title {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.right_column {
+    width: calc(100vw - 80px - 268px);
+    max-width: calc(var(--maxPrimaryPageWidth) - 80px - 268px);
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+}
+
+.right_column h3,
+.right_column h5 {
+    color: black;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.right_column p {
+    color: black;
+}
+
+.famouseMoive {
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+}
+
+.famouseMoive img {
+    width: 150px;
+    height: auto;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+}

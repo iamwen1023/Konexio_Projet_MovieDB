@@ -1,4 +1,5 @@
 
+
 #logo-tmdb img{
   width: 150px;
   height: auto;
@@ -43,6 +44,17 @@ background-color: white;
 color: black;
 
 }
+
+nav {
+    background-color: rgb( 13, 37, 63);
+}
+
+#carouselExampleSlidesOnly {
+    position: relative;
+    text-align: start;
+    color: white;
+}
+
 .top-left {
 position: absolute;
 top: 70px;
