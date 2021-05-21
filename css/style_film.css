@@ -9,6 +9,10 @@ body {
     height: auto;
 }
 
+.cast h2 {
+    color: red;
+}
+
 nav {
     background-color: rgb( 13, 37, 63);
 }

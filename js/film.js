@@ -14,7 +14,7 @@ $(function() {
     const queryparmas = getUrlVars();
     const filmId = queryparmas["filmId"];
     if (!filmId) {
-        $(".film").html("<h2>error!<h2>");
+        $(".cast").html("<h2>error!<h2>");
         return;
     }
     let link = "https://api.themoviedb.org/3/movie/" + filmId + "?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";

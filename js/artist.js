@@ -13,7 +13,7 @@ $(function() {
     const queryparmas = getUrlVars();
     const artistId = queryparmas["artistId"];
     if (!artistId) {
-        $(".film").html("<h2>error!<h2>");
+        $(".column_wrapper").html("<h2>error!<h2>");
         return;
     }
     let link = "https://api.themoviedb.org/3/person/" + artistId + "?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";

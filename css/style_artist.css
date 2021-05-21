@@ -11,6 +11,10 @@ nav {
     background-color: rgb( 13, 37, 63);
 }
 
+.column_wrapper h2 {
+    color: red;
+}
+
 .column_wrapper {
     width: 100%;
     display: flex;
