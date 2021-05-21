@@ -5,6 +5,11 @@
     background-color: white;
 }
 
+.results-list .row {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+
 .results-list img {
     width: 180px;
     height: fit-content;
@@ -26,6 +31,10 @@
     width: 85%;
     margin-left: 50px;
     margin-top: 50px;
+}
+
+.results-list a {
+    text-decoration: none;
 }
 
 .movie {
