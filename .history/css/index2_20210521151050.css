@@ -4,6 +4,9 @@
     font-style: italic;
     background-color: white;
 }
+.results-list{
+    padding: 1;
+}
 
 .results-list .row{
     width: 80%;

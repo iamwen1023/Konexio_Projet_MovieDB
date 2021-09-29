@@ -5,19 +5,16 @@
     background-color: white;
 }
 
-.results-list .row{
-    width: 80%;
-    border: 1px solid rgb(211, 211, 211);
-    box-shadow: whitesmoke;
+.results-list .row {
+    border: 1px solid darkgray;
     border-radius: 20px;
-   
+    border
 }
 
 .results-list img {
     width: 180px;
     height: fit-content;
     border-radius: 20px;
-    margin-left: 40px;
 }
 
 .results-list h3 {
@@ -36,17 +33,31 @@
     margin-left: 50px;
     margin-top: 50px;
 }
+
 .results-list a {
     text-decoration: none;
 }
+
+.movie {
+    width: 80%;
+    padding-bottom: 8px;
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .class1 .p1 {
     color: gray;
 }
+
 .page-link {
     left: 180px;
     margin-top: 20px;
     background-color: teal;
 }
+
 #logo-tmdb img {
     width: 150px;
     height: auto;

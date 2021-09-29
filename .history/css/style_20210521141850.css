@@ -49,6 +49,8 @@ nav {
     background-color: rgb( 13, 37, 63);
 }
 
+
+
 .top-left {
 position: absolute;
 top: 70px;
@@ -250,7 +252,8 @@ div.vote{
 border: green 3px solid;
 border-radius: 50%;
 width: 30px;
-
+/* position: absolute;
+margin-right: 80px; */
 }
 div .low{
 border-color: red;
